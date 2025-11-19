@@ -1,8 +1,77 @@
 <% layout('/layouts/boilerplate') -%>
-<body>
-    <h3>All Listings</h3>
 
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+<style>
+    #filters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter {
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        margin-right: 2.5rem;
+        margin-top: 2rem;
+        opacity: 0.7;
+    }
+    .filter:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .filter p {
+        font-size: 0.5rem;
+    }
+</style>
+
+<div id="filters">
+
+    <a href="/listings/category/trending" class="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+    </a>
+
+    <a href="/listings/category/rooms" class="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+    </a>
+
+    <a href="/listings/category/iconicCities" class="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Iconic cities</p>
+    </a>
+
+    <a href="/listings/category/beach" class="filter">
+        <div><i class="fa-solid fa-umbrella"></i></div>
+        <p>Beach</p>
+    </a>
+
+    <a href="/listings/category/amazingPools" class="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amazing pools</p>
+    </a>
+
+    <a href="/listings/category/lakefront" class="filter">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
+        <p>Lakefront</p>
+    </a>
+
+    <a href="/listings/category/camping" class="filter">
+        <div><i class="fa-solid fa-campground"></i></div>
+        <p>Camping</p>
+    </a>
+
+    <a href="/listings/category/farms" class="filter">
+        <div><i class="fa-solid fa-cow"></i></div>
+        <p>Farms</p>
+    </a>
+
+    <a href="/listings/category/activities" class="filter">
+        <div><i class="fa-solid fa-person-skiing"></i></div>
+        <p>Activities</p>
+    </a>
+
+</div>
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
         <% for(let listing of allListings) { %>
             <div class="col mb-4">
                 <a  href="/listings/<%=listing._id%>" class="listing-link">

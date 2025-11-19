@@ -29,6 +29,22 @@
             </div>
             <br />
             <div class="mb-3">
+                <label for="category"class="form-label">Choose a category</label>
+                <select name="listing[category]" id="category" required >
+                    <option value="">--Please choose an option--</option>
+                    <option value='Trending'>Trending</option>
+                    <option value='Rooms'>Rooms</option>
+                    <option value='Iconic cities'>Iconic cities</option>
+                    <option value='Beach'>Beach</option>
+                    <option value='Amazing pools'>Amazing pools</option>
+                    <option value='Lakefront'>Lakefront</option>
+                    <option value='Camping'>Camping</option>
+                    <option value='Farms'>Farms</option>
+                    <option value= 'Activities'>Activities</option>
+                </select>
+            </div>            
+            <br />
+            <div class="mb-3">
                 <label for="image" class="form-label">Upload Listing Image</label>
                 <input name="listing[image]" 
                     type="file"

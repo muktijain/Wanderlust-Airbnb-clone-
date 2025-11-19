@@ -105,6 +105,18 @@ body{
     opacity: 0.85;
 } 
 
+label .form-label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+#category {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+  margin: 1rem;
+}
+
 /* edit page */
 .edit-btn{
     background-color: #fe424d !important;
